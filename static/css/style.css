@@ -1321,27 +1321,27 @@ a {
 
     /* Game Page Mobile Responsive */
     .game-page {
-        padding: 1rem 0.5rem;
+        padding: 0.8rem 0.5rem;
     }
 
     .game-title {
-        font-size: clamp(1.8rem, 5vw, 2.5rem);
-        margin-bottom: 0.3rem;
+        font-size: clamp(1.6rem, 5vw, 2.2rem);
+        margin-bottom: 0.2rem;
     }
 
     .game-subtitle {
-        font-size: clamp(0.85rem, 2vw, 1rem);
-        margin-bottom: 1rem;
+        font-size: clamp(0.8rem, 2vw, 0.95rem);
+        margin-bottom: 0.8rem;
         padding: 0 1rem;
     }
 
     .game-stats {
-        gap: 1.5rem;
-        margin-bottom: 1rem;
+        gap: 2rem;
+        margin-bottom: 0.8rem;
     }
 
     .stat-label {
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 
     .game-container {
@@ -1350,14 +1350,15 @@ a {
 
     .game-board {
         grid-template-columns: repeat(5, 1fr);
-        gap: 5px;
-        width: 100%;
-        max-width: 350px;
-        padding: 0.3rem;
+        gap: 6px;
+        width: 95%;
+        max-width: 320px;
+        padding: 0.5rem;
     }
 
     .memory-card {
         border-radius: 8px;
+        aspect-ratio: 2.5 / 3.5;
     }
 
     /* Smaller heart shape for mobile */
@@ -1393,7 +1394,12 @@ a {
     }
 
     .card-front {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
+    }
+
+    .card-back img {
+        max-width: 90%;
+        max-height: 90%;
     }
 
     /* Match celebration mobile */
