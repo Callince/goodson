@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Memories 🐼🌸</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="memories-page">
+
+    <!-- Floating hearts background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Background music -->
+    <audio id="bgMusic" autoplay loop>
+        <source src="{{ url_for('static', filename='Enakkaaga-Poranthaayae.mp3') }}" type="audio/mpeg">
+    </audio>
+
+    <!-- Lightbox overlay -->
+    <div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightboxImg" src="" alt="Memory">
+        <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+
+    <div class="memories-content">
+        <h1 class="memories-title fade-in">Our Memories 🐼💕</h1>
+        <p class="memories-subtitle fade-in delay-1">Every moment with you is a treasure, Devika 🌸✨</p>
+
+        <div class="gallery">
+            {% for photo in photos %}
+            <div class="gallery-card fade-up" style="animation-delay: {{ loop.index * 0.12 }}s">
+                <div class="card-image" onclick="openLightbox('{{ url_for('static', filename=photo.src) }}', '{{ photo.caption }}')">
+                    <img src="{{ url_for('static', filename=photo.src) }}" alt="Memory {{ loop.index }}" loading="lazy">
+                </div>
+                <p class="card-caption">{{ photo.caption }}</p>
+            </div>
+            {% endfor %}
+        </div>
+
+        <div class="memories-footer fade-in delay-2">
+            <p class="footer-text">These are just a few of the moments I hold close, Devika... 🐼💗</p>
+            <a href="/game" class="btn-game">
+                <span>Let's Play a Game 🐼💕</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>initMemories();</script>
+</body>
+</html>

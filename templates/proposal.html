@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Devika 🐼💍</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="proposal-page">
+
+    <!-- Starry night canvas -->
+    <canvas id="starsCanvas"></canvas>
+
+    <!-- Floating hearts -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Background music -->
+    <audio id="bgMusic" autoplay loop>
+        <source src="{{ url_for('static', filename='Enakkaaga-Poranthaayae.mp3') }}" type="audio/mpeg">
+    </audio>
+
+    <!-- Confetti canvas (hidden until YES) -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <div class="proposal-content">
+        <!-- Phase 1: Typewriter intro -->
+        <div id="phase1" class="proposal-phase active">
+            <div class="typewriter-container">
+                <p id="typewriterText" class="typewriter-text"></p>
+            </div>
+        </div>
+
+        <!-- Phase 2: The big question -->
+        <div id="phase2" class="proposal-phase">
+            <h1 class="question-text glow">Devika, will you be with me forever? 🐼💕</h1>
+            <div class="proposal-buttons">
+                <button id="yesBtn" class="btn-yes" onclick="handleYes()">YES 🐼💖</button>
+                <button id="noBtn" class="btn-no" onclick="handleNo()">NO 😜</button>
+            </div>
+        </div>
+
+        <!-- Phase 3: YES response -->
+        <div id="phase3" class="proposal-phase">
+            <div class="yes-response">
+                <div class="ring-emoji">🐼</div>
+                <h1 class="yes-title">Devika, you just made me the happiest person alive 🐼❤️✨</h1>
+                <p class="yes-subtitle">I promise to love you forever and always, my panda 🌸💕</p>
+                <div class="heart-burst" id="heartBurst"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>initProposal();</script>
+</body>
+</html>

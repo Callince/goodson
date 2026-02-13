@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You, Devika 🐼</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="home-page">
+
+    <!-- Floating hearts background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Starry sky canvas -->
+    <canvas id="starsCanvas"></canvas>
+
+    <!-- Background music -->
+    <audio id="bgMusic" autoplay loop>
+        <source src="{{ url_for('static', filename='Enakkaaga-Poranthaayae.mp3') }}" type="audio/mpeg">
+    </audio>
+
+    <div class="home-content">
+        <div class="heart-icon pulse">🐼</div>
+        <h1 class="home-title fade-in">I Made This For You, Devika 🐼❤️</h1>
+        <p class="home-subtitle fade-in delay-1">A few memories that mean everything to me 🌸✨</p>
+        <div class="home-buttons fade-in delay-2">
+            <a href="/memories" class="btn-start">
+                <span>Our Memories</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script>initHome();</script>
+</body>
+</html>
