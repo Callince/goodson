@@ -1227,9 +1227,25 @@ a {
         bottom: 30px;
     }
 
+    /* Game Page Tablet Responsive */
+    .game-page {
+        padding: 1.5rem 1rem;
+    }
+
+    .game-title {
+        font-size: clamp(2rem, 6vw, 3rem);
+        margin-bottom: 0.5rem;
+    }
+
+    .game-subtitle {
+        font-size: clamp(0.9rem, 2.2vw, 1.1rem);
+        margin-bottom: 1.5rem;
+    }
+
     .game-container {
         flex-direction: column;
         gap: 1rem;
+        padding: 0.5rem;
     }
 
     .couple-gif-left,
@@ -1240,7 +1256,9 @@ a {
     .game-board {
         grid-template-columns: repeat(5, 1fr);
         gap: 8px;
+        width: 100%;
         max-width: 500px;
+        padding: 0.5rem;
     }
 
     /* Adjust heart shape for tablets */
@@ -1278,7 +1296,8 @@ a {
     }
 
     .btn-start,
-    .btn-next {
+    .btn-next,
+    .btn-game {
         padding: 14px 36px;
         font-size: 1rem;
     }
@@ -1300,11 +1319,45 @@ a {
         font-size: 0.85rem;
     }
 
+    /* Game Page Mobile Responsive */
+    .game-page {
+        padding: 1rem 0.5rem;
+    }
+
+    .game-title {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+        margin-bottom: 0.3rem;
+    }
+
+    .game-subtitle {
+        font-size: clamp(0.85rem, 2vw, 1rem);
+        margin-bottom: 1rem;
+        padding: 0 1rem;
+    }
+
+    .game-stats {
+        gap: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+
+    .game-container {
+        padding: 0;
+    }
+
     .game-board {
         grid-template-columns: repeat(5, 1fr);
-        gap: 6px;
-        padding: 0.5rem;
+        gap: 5px;
+        width: 100%;
         max-width: 350px;
+        padding: 0.3rem;
+    }
+
+    .memory-card {
+        border-radius: 8px;
     }
 
     /* Smaller heart shape for mobile */
@@ -1341,5 +1394,60 @@ a {
 
     .card-front {
         font-size: 1.5rem;
+    }
+
+    /* Match celebration mobile */
+    .dancing-bear {
+        width: 150px;
+        height: 150px;
+    }
+
+    .match-quote {
+        font-size: clamp(1rem, 3.5vw, 1.4rem);
+        padding: 0 1rem;
+    }
+
+    /* Win overlay mobile */
+    .win-title {
+        font-size: clamp(1.8rem, 5vw, 2.5rem);
+    }
+
+    .win-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .win-message {
+        font-size: 1rem;
+    }
+
+    .btn-continue {
+        padding: 14px 36px;
+        font-size: 1rem;
+    }
+
+    /* Love GIF mobile */
+    .love-gif {
+        width: 200px;
+        height: 200px;
+    }
+
+    /* Proposal page mobile */
+    .proposal-content {
+        padding: 1rem;
+    }
+
+    .typewriter-container {
+        padding: 1rem;
+        min-height: 400px;
+    }
+
+    /* Home page mobile */
+    .home-content {
+        padding: 1.5rem;
+    }
+
+    .heart-icon {
+        font-size: 3rem;
+        margin-bottom: 1rem;
     }
 }
